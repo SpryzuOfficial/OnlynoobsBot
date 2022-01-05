@@ -5,6 +5,7 @@ const { Client, Intents } = require('discord.js');
 const {MessageEmbed, MessageButton, MessageActionRow} = require('discord.js');
 
 const {setup, close, nextTurn} = require('./models/tictactoe');
+const keepAlive = require('./server');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -68,5 +69,10 @@ client.on('interactionCreate', async(interaction) =>
 {	
     nextTurn(interaction, client);
 });
+
+if(process.env.PRODUCTION == 1)
+{
+    keepAlive();
+}
 
 client.login(process.env.TOKEN);
