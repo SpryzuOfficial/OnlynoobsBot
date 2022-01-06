@@ -14,7 +14,7 @@ let lastmsg;
 
 const values = [];
 
-const play_y_msgs = ['You cant play with your self... :flushed:', 'You will win anyway :rolling_eyes:', 'So you want to defeat Guy Incognito...'];
+const play_y_msgs = ['You cant play with yourself... :flushed:', 'You will win anyway :rolling_eyes:', 'So you want to defeat Guy Incognito...'];
 const play_bot_msgs = ['I will win you anyway :smirk:', "I can't play in office time!", 'ZzzZzzzZz :sleeping:'];
 
 const setup = async(message, client) => 
